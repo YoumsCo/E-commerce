@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#space {
+    width: 100vw;
+    height: 50px;
+}
+
+/*
+****************************************************************************************
+Gestion de la navbar
+****************************************************************************************
+*/
+
+#container-nav {
+    transition: all .4s ease-in-out;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+#container-nav #nav {
+    transition: all .4s ease-in-out;
+    background: black;
+    border: 2px solid whitesmoke;
+    width: 90%;
+    height: 50px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px whitesmoke;
+} 
+
+/*
+****************************************************************************************
+Gestion de la search bar
+****************************************************************************************
+*/
+
+#container-nav #nav #searchbar {
+    transition: all .4s ease-in-out;
+    background: black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+} 
+
+#container-nav #nav #searchbar [type="text"] {
+    transition: all .4s ease-in-out;
+    background: transparent;
+    width: 80%;
+    height: 35px;
+    border-radius: 20px;
+    color: whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    padding: 0 35px 0 15px;
+    font-size: 13pt;
+} 
+
+@media screen and (max-width: 800px) {
+    #container-nav #nav #searchbar [type="text"] {
+        transition: all .4s ease-in-out;
+        width: 100%;
+    } 
+}
+
+#container-nav #nav #searchbar [type="text"]::placeholder {
+    transition: all .4s ease-in-out;
+    color: whitesmoke;
+    font-size: 13pt;
+} 
+
+#container-nav #nav #searchbar .fa {
+    transition: all .4s ease-in-out;
+    color: whitesmoke;
+    transform: translateX(-30px);
+    font-size: 13pt;
+} 
+#container-nav #nav #searchbar .fa-close {
+    transition: all .4s ease-in-out;
+    color: red !important;
+    z-index: 10 !important;
+} 
+
+#container-nav #nav #searchbar .fa-close:hover {
+    transition: all .4s ease-in-out;
+    color: cyan !important;
+} 
+
+/*
+****************************************************************************************
+Gestion des liens
+****************************************************************************************
+*/
+
+#container-nav #nav #links {
+    transition: all .4s ease-in-out;
+    position: relative;
+    background: black;
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#container-nav #nav #links .fa {
+    transition: all .4s ease-in-out;
+    position: relative;
+    font-size: 15pt;
+    color: whitesmoke;
+    text-decoration: none;
+} 
+
+#container-nav #nav #links .current_page::after {
+    transition: all .4s ease-in-out;
+    position: absolute;
+    content: "zebize";
+    left: 0 !important;
+    bottom: 0px;
+    width: 100% !important;
+    height: 4px;
+    background: red;
+}
+
+#container-nav #nav #links .fa::after {
+    transition: all .4s ease-in-out;
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 4px;
+    background: whitesmoke;
+}
+
+#container-nav #nav #links .fa:hover::after {
+    transition: all .4s ease-in-out;
+    left: 0;
+    width: 100%;
+}

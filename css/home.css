@@ -1,0 +1,392 @@
+:root {
+    --transition-value: all .4s ease-in-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+    border-radius: 20px;
+}
+
+body {
+    transition: var(--transition-value);
+    width: 100vw;
+    background: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+#space-top {
+    transition: var(--transition-value);
+    width: 100%;
+    height: 30px;
+}
+
+#space-top span {
+    transition: var(--transition-value);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.element-hidden {
+    transition: var(--transition-value);
+    opacity: 0;
+    z-index: -1000 !important;
+}
+
+.element-hidden-disapear {
+    display: none;
+}
+
+/*
+****************************************************************************************
+Gestion du container
+****************************************************************************************
+*/
+
+#container {
+    transition: var(--transition-value);
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media screen and (max-width: 831px) {
+    #container {
+        transition: var(--transition-value);
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 631px) {
+    #container {
+        transition: var(--transition-value);
+        gap: 20px;
+    }
+}
+
+
+/*
+****************************************************************************************
+Gestion des produits
+****************************************************************************************
+*/
+
+#container .product {
+    transition: var(--transition-value);
+    width: 250px;
+    height: 300px;
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 3px 10px whitesmoke;
+}
+
+@media screen and (max-width: 631px) {
+    #container .product {
+        transition: var(--transition-value);
+        width: 95%;
+    }
+}
+
+#container .product .product-image {
+    transition: var(--transition-value);
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+#container .product .product-image img {
+    transition: var(--transition-value);
+    width: 100%;
+    height: 100%;
+}
+
+#container .product .product-image #info {
+    transition: var(--transition-value);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.818);
+    font-size: 13pt;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+#container .product .product-info {
+    transition: var(--transition-value);
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container .product .product-info .product-name {
+    transition: var(--transition-value);
+    font-size: 13pt;
+}
+
+#container .product .product-info .product-name .fa-eye {
+    transition: var(--transition-value);
+    font-size: 13pt;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#container .product-found .product-info .product-name {
+    transition: var(--transition-value);
+    color: rgb(2, 2, 32);
+    font-weight: 900;
+    background: aquamarine;
+}
+
+#container .product .product-info button {
+    transition: var(--transition-value);
+    position: relative;
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
+    font-weight: 900;
+    font-size: 13pt;
+}
+#container .product .product-info button a {
+    transition: var(--transition-value);
+    background: transparent;
+    color: whitesmoke;
+    font-weight: 900;
+    font-size: 13pt;
+    text-decoration: none;
+}
+
+#container .product .product-info button:hover {
+    transition: var(--transition-value);
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+}
+
+#container .product .product-info button:hover a {
+    transition: var(--transition-value);
+    color: black;
+}
+
+#container .product .product-info button:active {
+    transition: var(--transition-value);
+    transform: scale(.5);
+}
+
+#container .product .product-info button::before {
+    transition: var(--transition-value);
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: black;
+}
+
+#container .product .product-info button:hover::before {
+    transition: var(--transition-value);
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+#container .product .product-info button::after {
+    transition: var(--transition-value);
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: -3px;
+    width: 0;
+    height: 3px;
+    background: black;
+}
+
+#container .product .product-info button:hover::after {
+    transition: var(--transition-value);
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+
+/* 
+***********************************************************************************
+CSS du message de connexion
+*********************************************************************************** 
+*/
+
+
+.hidden {
+    transition: all .4s ease-in-out;
+    opacity: 0 !important;
+    z-index: -100;
+}
+
+#contain-message {
+    transition: all .4s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.568);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contain-message #success {
+    transition: all .4s ease-in-out;
+    width: 400px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.801);
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.animated #success {
+    animation: animated-message 1s 1 ease-in-out;
+}
+
+#contain-message #success #animation {
+    transition: all .4s ease-in-out;
+    position: relative;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+#contain-message #success #animation div:first-child {
+    transition: all .4s ease-in-out;
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background: whitesmoke;
+    transform: translate(20px, 50px) rotate(30deg);
+}
+
+.animated #success #animation div:first-child {
+    animation: animated-div-one .3s 1 linear;
+}
+
+#contain-message #success #animation div:last-child {
+    transition: all .4s ease-in-out;
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: whitesmoke;
+    transform: translate(30px, 40px) rotate(-50deg);
+}
+
+.animated #success #animation div:last-child {
+    animation: animated-div-two .3s 1 linear;
+}
+
+@keyframes animated-message {
+    0% {
+        width: 300px;
+        height: 100px;
+    }
+
+    20% {
+        width: 500px;
+        height: 300px;
+    }
+    
+    50% {
+        width: 350px;
+        height: 150px;
+    }
+    
+    100% {
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@keyframes animated-div-one {
+    from {
+        width: 1px;
+    }
+    to {
+        width: 20px;
+    }
+}
+
+@keyframes animated-div-two {
+    from {
+        width: 10px;
+    }
+    to {
+        width: 50px;
+    }
+}
+    
+/* 
+***********************************************************************************
+CSS du footer
+*********************************************************************************** 
+*/
+
+footer {
+    transition: var(--transition-value);
+    width: 80%;
+    height: 45px;
+    background: transparent;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    font-size: 15pt;
+    font-weight: 900;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: inset 0 5px 10px whitesmoke;
+}
